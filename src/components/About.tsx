@@ -76,8 +76,12 @@ const About = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-accent flex items-center justify-center shadow-glow">
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-3xl bg-card flex items-center justify-center border-4 border-white/20">
                   <div className="text-center space-y-4">
-                    <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto flex items-center justify-center">
-                      <span className="text-4xl font-bold text-white">SZ</span>
+                    <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white/20 shadow-elegant">
+                      <img 
+                        src="/lovable-uploads/43e71f6f-56aa-43b9-b365-0a175bd54885.png" 
+                        alt="Syeda Zoha Shaik - AI/ML Engineer"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold text-foreground">Syeda Zoha Shaik</h3>
