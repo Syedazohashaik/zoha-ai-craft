@@ -8,7 +8,13 @@ import {
   Clock, 
   MessageSquare,
   Zap,
-  Cpu
+  Cpu,
+  Flame,
+  Layers,
+  Server,
+  Terminal,
+  GitBranch,
+  Monitor
 } from "lucide-react";
 
 const Skills = () => {
@@ -16,32 +22,60 @@ const Skills = () => {
     {
       title: "Programming & Frameworks",
       icon: Code,
-      skills: ["Python", "Flask", "React", "Java", "SQL", "HTML", "CSS"],
-      color: "text-blue-500"
+      skills: [
+        { name: "Python", icon: "🐍" },
+        { name: "Flask", icon: "🌶️" },
+        { name: "React", icon: "⚛️" },
+        { name: "Java", icon: "☕" },
+        { name: "SQL", icon: "🗃️" },
+        { name: "HTML", icon: "🌐" },
+        { name: "CSS", icon: "🎨" }
+      ],
+      color: "text-primary"
     },
     {
       title: "Cloud & Databases",
       icon: Cloud,
-      skills: ["AWS", "Google Cloud", "Firebase"],
-      color: "text-green-500"
+      skills: [
+        { name: "AWS", icon: "☁️" },
+        { name: "Google Cloud", icon: "🌤️" },
+        { name: "Firebase", icon: "🔥" }
+      ],
+      color: "text-accent"
     },
     {
       title: "AI/ML Libraries",
       icon: Brain,
-      skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "Streamlit"],
-      color: "text-purple-500"
+      skills: [
+        { name: "TensorFlow", icon: "🧠" },
+        { name: "Scikit-learn", icon: "📊" },
+        { name: "Pandas", icon: "🐼" },
+        { name: "NumPy", icon: "🔢" },
+        { name: "OpenCV", icon: "👁️" },
+        { name: "Streamlit", icon: "🚀" }
+      ],
+      color: "text-primary-glow"
     },
     {
       title: "Tools",
       icon: Zap,
-      skills: ["Git", "VS Code", "Linux"],
-      color: "text-orange-500"
+      skills: [
+        { name: "Git", icon: "📝" },
+        { name: "VS Code", icon: "💻" },
+        { name: "Linux", icon: "🐧" }
+      ],
+      color: "text-secondary-foreground"
     },
     {
       title: "Soft Skills",
       icon: Users,
-      skills: ["Communication", "Teamwork", "Time Management", "Work Ethic"],
-      color: "text-pink-500"
+      skills: [
+        { name: "Communication", icon: "💬" },
+        { name: "Teamwork", icon: "🤝" },
+        { name: "Time Management", icon: "⏰" },
+        { name: "Work Ethic", icon: "💪" }
+      ],
+      color: "text-muted-foreground"
     }
   ];
 
@@ -76,13 +110,18 @@ const Skills = () => {
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-sm font-medium bg-surface text-foreground rounded-full border border-border hover:bg-accent-soft hover:border-accent transition-colors duration-300"
+                  <div
+                    key={skill.name}
+                    className="group/skill flex items-center gap-2 px-4 py-2 text-sm font-medium bg-surface text-foreground rounded-xl border border-border hover:bg-gradient-tech hover:text-white hover:border-accent hover:shadow-soft transition-all duration-300 cursor-pointer"
                     style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
                   >
-                    {skill}
-                  </span>
+                    <span className="text-lg group-hover/skill:scale-110 transition-transform duration-300">
+                      {skill.icon}
+                    </span>
+                    <span className="group-hover/skill:font-semibold transition-all duration-300">
+                      {skill.name}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -93,13 +132,24 @@ const Skills = () => {
         <div className="mt-16 text-center animate-fade-in">
           <h3 className="text-2xl font-semibold text-foreground mb-8">Core Competencies</h3>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {["Python Development", "Machine Learning", "Cloud Computing", "Data Analysis", "Problem Solving"].map((skill, index) => (
+            {[
+              { name: "Python Development", icon: "🐍" },
+              { name: "Machine Learning", icon: "🤖" },
+              { name: "Cloud Computing", icon: "☁️" },
+              { name: "Data Analysis", icon: "📈" },
+              { name: "Problem Solving", icon: "🧩" }
+            ].map((skill, index) => (
               <div
-                key={skill}
-                className="px-6 py-3 bg-gradient-accent rounded-full text-foreground font-medium hover:scale-105 transition-transform duration-300 shadow-soft"
+                key={skill.name}
+                className="group flex items-center gap-3 px-6 py-4 bg-gradient-primary rounded-2xl text-white font-medium hover:scale-105 transition-all duration-300 shadow-glow hover:shadow-xl cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {skill}
+                <span className="text-2xl group-hover:rotate-12 transition-transform duration-300">
+                  {skill.icon}
+                </span>
+                <span className="group-hover:tracking-wide transition-all duration-300">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>

@@ -12,17 +12,17 @@
     --surface: 0 0% 98%;
     --surface-elevated: 0 0% 100%;
     
-    /* Brand Colors - Blue Palette */
-    --primary: 214 100% 35%; /* #1E40AF */
+    /* Unique Professional Palette - Teal & Deep Purple */
+    --primary: 194 78% 28%; /* Deep Teal #1A5F7A */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 60%;
+    --primary-glow: 172 76% 64%;
     
-    --secondary: 220 14% 96%; /* Light Gray */
-    --secondary-foreground: 214 100% 35%;
+    --secondary: 210 40% 92%; /* Cool Gray */
+    --secondary-foreground: 194 78% 28%;
     
-    --accent: 217 91% 60%;
+    --accent: 172 76% 64%; /* Bright Teal #57CC99 */
     --accent-foreground: 0 0% 100%;
-    --accent-soft: 217 91% 95%;
+    --accent-soft: 172 76% 92%;
     
     /* UI Colors */
     --muted: 220 14% 96%;
@@ -50,6 +50,7 @@
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent-soft)), hsl(var(--accent)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface)));
+    --gradient-tech: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
     
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
