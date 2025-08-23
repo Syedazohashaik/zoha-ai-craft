@@ -6,31 +6,31 @@ const Projects = () => {
     {
       title: "Holoscene",
       subtitle: "Gesture-Controlled Holographic Display",
-      description: "Developed a touchless holographic interface using gesture recognition technology. Created an innovative display system that responds to hand gestures without physical contact.",
-      technologies: ["Python", "OpenCV", "PySerial", "ESP8266", "IR Sensors"],
-      date: "Aug 2024",
-      type: "Innovation Project",
+      description: "IoT & Computer Vision project featuring a touchless holographic display for education and demos. Built using Python Flask backend with OpenCV for gesture recognition and ESP8266 for hardware control.",
+      technologies: ["Python", "Flask", "OpenCV", "ESP8266"],
+      date: "Jan–May 2024",
+      type: "IoT & Computer Vision",
       highlights: [
-        "Touchless gesture recognition system",
-        "Real-time holographic display",
-        "Hardware-software integration",
-        "IoT sensor implementation"
+        "Touch-free holographic interface",
+        "Real-time gesture recognition",
+        "Flask web application backend",
+        "Educational demonstration tool"
       ],
       githubUrl: "https://github.com/Syedazohashaik",
       liveUrl: null
     },
     {
-      title: "Virtual Network Configuration",
-      subtitle: "Network Simulation & Design",
-      description: "Simulated a comprehensive virtual network infrastructure using Cisco Packet Tracer. Designed and implemented complex network topologies with proper routing and security configurations.",
-      technologies: ["Cisco Packet Tracer", "Networking Fundamentals", "Network Security", "Routing Protocols"],
-      date: "Feb 2023",
-      type: "Academic Project",
+      title: "Heart Disease Prediction",
+      subtitle: "Machine Learning Classification System",
+      description: "Data Science project implementing machine learning algorithms to predict heart disease risk. Used Logistic Regression and Decision Tree models with comprehensive data analysis and visualization.",
+      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+      date: "Oct–Dec 2024",
+      type: "Data Science & ML",
       highlights: [
-        "Complex network topology design",
-        "Routing protocol implementation",
-        "Network security configuration",
-        "Performance optimization"
+        "Logistic Regression implementation",
+        "Decision Tree classification",
+        "Comprehensive data preprocessing",
+        "Medical prediction accuracy optimization"
       ],
       githubUrl: "https://github.com/Syedazohashaik",
       liveUrl: null

@@ -17,13 +17,13 @@ const About = () => {
           <div className="space-y-6 animate-slide-up">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I am an <span className="font-semibold text-foreground">ambitious and detail-oriented undergraduate</span> in 
-              Artificial Intelligence and Machine Learning with a strong foundation in Python, machine learning algorithms, 
-              Linux, and cloud computing.
+              Artificial Intelligence and Machine Learning with strong expertise in <span className="font-semibold text-accent">Python, Flask, React, and Firebase</span>.
+              Passionate about building scalable, user-centric applications.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               Experienced with <span className="font-semibold text-accent">AWS, Google Cloud, TensorFlow, and Scikit-learn</span>. 
-              Passionate about solving real-world problems and delivering impactful, data-driven solutions.
+              I excel at implementing ML solutions and translating innovative concepts into working prototypes that solve real-world problems.
             </p>
 
             {/* Personal Info */}

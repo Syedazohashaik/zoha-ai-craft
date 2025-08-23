@@ -12,13 +12,13 @@
     --surface: 0 0% 98%;
     --surface-elevated: 0 0% 100%;
     
-    /* Brand Colors */
-    --primary: 223 84% 15%;
+    /* Brand Colors - Blue Palette */
+    --primary: 214 100% 35%; /* #1E40AF */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 217 91% 60%;
     
-    --secondary: 217 32% 92%;
-    --secondary-foreground: 223 84% 15%;
+    --secondary: 220 14% 96%; /* Light Gray */
+    --secondary-foreground: 214 100% 35%;
     
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;

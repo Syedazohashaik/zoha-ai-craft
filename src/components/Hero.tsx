@@ -41,16 +41,16 @@ const Hero = () => {
 
           {/* Title */}
           <h2 className="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-8 font-light">
-            AI/ML Engineer & Python Developer
+            Full-Stack Developer & AI/ML Enthusiast
           </h2>
 
           {/* Description */}
           <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Passionate about solving real-world problems with 
-            <span className="font-semibold text-white"> artificial intelligence</span>, 
-            <span className="font-semibold text-white"> machine learning</span>, and 
-            <span className="font-semibold text-white"> cloud technologies</span>.
-            Delivering impactful, data-driven solutions.
+            Building scalable, user-centric applications with 
+            <span className="font-semibold text-white"> Python</span>, 
+            <span className="font-semibold text-white"> React</span>, and 
+            <span className="font-semibold text-white"> AI/ML technologies</span>.
+            Passionate about implementing innovative solutions and translating concepts into working prototypes.
           </p>
 
           {/* CTA Buttons */}

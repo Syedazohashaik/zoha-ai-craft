@@ -14,27 +14,27 @@ import {
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Programming & Frameworks",
       icon: Code,
-      skills: ["Python", "SQL", "HTML", "CSS", "Java"],
+      skills: ["Python", "Flask", "React", "Java", "SQL", "HTML", "CSS"],
       color: "text-blue-500"
     },
     {
-      title: "Frameworks & Tools",
-      icon: Zap,
-      skills: ["Flask", "VS Code", "AWS", "Google Cloud", "Git"],
+      title: "Cloud & Databases",
+      icon: Cloud,
+      skills: ["AWS", "Google Cloud", "Firebase"],
       color: "text-green-500"
     },
     {
       title: "AI/ML Libraries",
       icon: Brain,
-      skills: ["TensorFlow", "NumPy", "Pandas", "Scikit-learn", "Streamlit"],
+      skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "Streamlit"],
       color: "text-purple-500"
     },
     {
-      title: "Technical Domains",
-      icon: Cpu,
-      skills: ["Artificial Intelligence", "Machine Learning", "Web Development", "Cloud Computing", "Linux"],
+      title: "Tools",
+      icon: Zap,
+      skills: ["Git", "VS Code", "Linux"],
       color: "text-orange-500"
     },
     {

@@ -6,14 +6,14 @@ const Experience = () => {
       type: "work",
       title: "Python Programming Intern",
       company: "EZ Trainings and Technologies",
-      location: "Remote",
+      location: "India",
       duration: "Apr 2024 - May 2024",
-      description: "Strengthened Python, data structures, and OOP concepts through hands-on projects. Built mini-projects and gained exposure to collaborative coding practices.",
+      description: "Worked on developing and automating applications, writing efficient Python code, and contributing to real-world projects. Gained hands-on experience in software development lifecycle and collaborative programming practices.",
       achievements: [
-        "Enhanced Python programming skills through practical projects",
-        "Mastered data structures and object-oriented programming concepts",
-        "Developed mini-projects showcasing technical proficiency",
-        "Gained experience in collaborative coding environments"
+        "Developed and automated applications using Python",
+        "Wrote efficient, clean code following best practices",
+        "Contributed to real-world software development projects",
+        "Enhanced problem-solving skills through practical implementation"
       ],
       skills: ["Python", "Data Structures", "OOP", "Project Development", "Collaboration"]
     }
@@ -30,16 +30,16 @@ const Experience = () => {
 
   const achievements = [
     {
-      title: "Holoscene Innovation",
-      description: "Built and demonstrated Holoscene, an innovative holographic display with gesture control technology",
+      title: "Project Success in AI, IoT, and Web Development",
+      description: "Successfully delivered projects across multiple domains, translating innovative concepts into working prototypes",
       icon: Award,
       date: "2024"
     },
     {
-      title: "Network Configuration Excellence",
-      description: "Successfully simulated complex network configurations using advanced networking protocols",
+      title: "Heart Disease Prediction System",
+      description: "Implemented machine learning algorithms achieving high accuracy in medical prediction models",
       icon: Award,
-      date: "2023"
+      date: "2024"
     }
   ];
 
@@ -47,8 +47,8 @@ const Experience = () => {
     {
       title: "Google Cloud Engineer",
       issuer: "Google Cloud Platform",
-      date: "June 2025",
-      credentialId: "GCP-2025-001",
+      date: "2024",
+      credentialId: "GCP-2024-001",
       skills: ["Cloud Computing", "Google Cloud", "Infrastructure", "DevOps"]
     }
   ];
