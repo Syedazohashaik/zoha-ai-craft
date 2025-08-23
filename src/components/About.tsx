@@ -63,7 +63,22 @@ const About = () => {
 
             {/* CTA */}
             <div className="pt-6">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => {
+                  // Open resume in new tab
+                  window.open('/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png', '_blank');
+                  // Create download link
+                  const link = document.createElement('a');
+                  link.href = '/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png';
+                  link.download = 'Syeda-Zoha-Shaik-Resume.png';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download Resume
               </Button>

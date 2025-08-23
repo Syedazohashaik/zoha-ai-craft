@@ -60,7 +60,22 @@ const Header = () => {
               </button>
             ))}
             
-            <Button variant="hero" size="sm" className="ml-4">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="ml-4"
+              onClick={() => {
+                // Open resume in new tab
+                window.open('/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png', '_blank');
+                // Create download link
+                const link = document.createElement('a');
+                link.href = '/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png';
+                link.download = 'Syeda-Zoha-Shaik-Resume.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="mr-2 h-4 w-4" />
               Resume
             </Button>
@@ -92,7 +107,22 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <Button variant="hero" size="sm" className="w-full mt-4">
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="w-full mt-4"
+                onClick={() => {
+                  // Open resume in new tab
+                  window.open('/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png', '_blank');
+                  // Create download link
+                  const link = document.createElement('a');
+                  link.href = '/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png';
+                  link.download = 'Syeda-Zoha-Shaik-Resume.png';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
