@@ -49,7 +49,32 @@ const Experience = () => {
       issuer: "Google Cloud Platform",
       date: "2024",
       credentialId: "GCP-2024-001",
-      skills: ["Cloud Computing", "Google Cloud", "Infrastructure", "DevOps"]
+      skills: ["Cloud Computing", "Google Cloud", "Infrastructure", "DevOps"],
+      link: "https://drive.google.com/file/d/1s7Lpd3gjCMrEYmoDfsnbNm1-6bDI1cFN/view?usp=drivesdk"
+    },
+    {
+      title: "AWS Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "May 2025",
+      credentialId: "AWS-CP-2025",
+      skills: ["AWS", "Cloud Computing", "Cloud Security", "Cost Optimization"],
+      link: "https://drive.google.com/file/d/1X8BAWSJY7Qp8A3cQF7puHOsS41e8emdF/view?usp=drivesdk"
+    },
+    {
+      title: "AWS Solutions Architect",
+      issuer: "Amazon Web Services",
+      date: "2025",
+      credentialId: "AWS-SA-2025",
+      skills: ["AWS Architecture", "Solution Design", "Cloud Migration", "Best Practices"],
+      link: "https://drive.google.com/file/d/1cBTYtmrh9XLYGVQW_KVAXxVnZd4VFOkO/view?usp=drivesdk"
+    },
+    {
+      title: "Cybersecurity Analyst",
+      issuer: "Cybersecurity Institute",
+      date: "2024",
+      credentialId: "CSA-2024-001",
+      skills: ["Threat Analysis", "Security Assessment", "Incident Response", "Risk Management"],
+      link: "https://drive.google.com/file/d/1y-XGqr0zP62AlpOcWz7qqESO5AN8xiOX/view?usp=drivesdk"
     }
   ];
 
@@ -196,20 +221,25 @@ const Experience = () => {
               
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-gradient-accent p-6 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300">
+                  <div key={index} className="bg-gradient-accent p-6 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer group"
+                       onClick={() => window.open(cert.link, '_blank')}>
                     <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-xl font-bold text-foreground">{cert.title}</h4>
+                      <h4 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">{cert.title}</h4>
                       <span className="text-sm text-muted-foreground">{cert.date}</span>
                     </div>
                     
                     <p className="text-accent font-semibold mb-3">{cert.issuer}</p>
                     
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-3">
                       {cert.skills.map((skill) => (
                         <span key={skill} className="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full border border-primary/20">
                           {skill}
                         </span>
                       ))}
+                    </div>
+                    
+                    <div className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">
+                      Click to view certificate →
                     </div>
                   </div>
                 ))}

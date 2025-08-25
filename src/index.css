@@ -6,42 +6,30 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 223 84% 5%;
-    --surface: 0 0% 98%;
-    --surface-elevated: 0 0% 100%;
-    
-    /* Unique Professional Palette - Teal & Deep Purple */
-    --primary: 194 78% 28%; /* Deep Teal #1A5F7A */
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 172 76% 64%;
-    
-    --secondary: 210 40% 92%; /* Cool Gray */
-    --secondary-foreground: 194 78% 28%;
-    
-    --accent: 172 76% 64%; /* Bright Teal #57CC99 */
-    --accent-foreground: 0 0% 100%;
-    --accent-soft: 172 76% 92%;
-    
-    /* UI Colors */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
-    
-    /* Card Colors */
+    /* Core Brand Colors - Clean & Professional */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 223 84% 5%;
-    
-    /* Popover Colors */
+    --card-foreground: 215 25% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 223 84% 5%;
-    
-    /* Destructive Colors */
+    --popover-foreground: 215 25% 15%;
+    --primary: 185 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 185 75% 65%;
+    --secondary: 260 35% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 25% 45%;
+    --accent: 260 55% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 260 25% 96%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
+    --surface: 210 15% 99%;
+    --surface-foreground: 215 25% 15%;
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 185 70% 50%;
     
     /* Design System */
     --radius: 0.75rem;

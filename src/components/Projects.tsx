@@ -4,17 +4,129 @@ import { ExternalLink, Github, Calendar, ArrowRight } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "MedMate",
+      subtitle: "Universal Health Assistant App",
+      description: "Mobile health assistant app for medication tracking, prescriptions, and doctor appointments with comprehensive health management features.",
+      technologies: ["Flutter", "Python", "Firebase", "MongoDB", "React", "Flask", "Node.js"],
+      date: "2025",
+      type: "Mobile Health App",
+      highlights: [
+        "Medication tracking and reminders",
+        "Prescription management system",
+        "Doctor appointment scheduling",
+        "Health data analytics"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
       title: "Holoscene",
-      subtitle: "Gesture-Controlled Holographic Display",
-      description: "IoT & Computer Vision project featuring a touchless holographic display for education and demos. Built using Python Flask backend with OpenCV for gesture recognition and ESP8266 for hardware control.",
-      technologies: ["Python", "Flask", "OpenCV", "ESP8266"],
-      date: "Jan–May 2024",
-      type: "IoT & Computer Vision",
+      subtitle: "Holographic Display System",
+      description: "Interactive holographic display system with gesture-controlled features for immersive user experiences and educational demonstrations.",
+      technologies: ["ESP8266", "Touch Sensors", "Hardware", "Gesture Control", "Python", "OpenCV"],
+      date: "2024",
+      type: "IoT & Hardware",
       highlights: [
         "Touch-free holographic interface",
         "Real-time gesture recognition",
-        "Flask web application backend",
-        "Educational demonstration tool"
+        "Hardware integration with ESP8266",
+        "Interactive display system"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Student Chatbot",
+      subtitle: "College Office Automation",
+      description: "AI-powered chatbot to automate fee payments and office tasks, streamlining administrative processes for students and staff.",
+      technologies: ["Python", "AI", "Automation", "Natural Language Processing"],
+      date: "2024",
+      type: "AI & Automation",
+      highlights: [
+        "Automated fee payment processing",
+        "Office task automation",
+        "AI-powered conversation handling",
+        "Student service optimization"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Task Scheduler",
+      subtitle: "Email-Based Task Management",
+      description: "Task manager with email subscription, verification, and hourly reminders for efficient productivity management.",
+      technologies: ["PHP", "CRON", "Gmail SMTP", "PHPMailer"],
+      date: "2025",
+      type: "Web Application",
+      highlights: [
+        "Email subscription system",
+        "Automated hourly reminders",
+        "Task verification workflow",
+        "SMTP integration"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Academic Journal Portal",
+      subtitle: "CRUD Journal Management System",
+      description: "CRUD system for managing academic journals with user authentication and comprehensive journal management features.",
+      technologies: ["Streamlit", "SQLite", "Python"],
+      date: "2025",
+      type: "Web Application",
+      highlights: [
+        "Complete CRUD operations",
+        "User authentication system",
+        "Journal categorization",
+        "Search and filter functionality"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Appliance Control Interface",
+      subtitle: "IoT Mobile Controller",
+      description: "Android project to control appliances with a mobile app, enabling smart home automation through mobile interface.",
+      technologies: ["Kotlin", "IoT", "Android"],
+      date: "2025",
+      type: "Mobile & IoT",
+      highlights: [
+        "Mobile appliance control",
+        "IoT device integration",
+        "Real-time device monitoring",
+        "Smart home automation"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Mental Health Prediction",
+      subtitle: "R Programming ML System",
+      description: "Built ML models to predict mental health status using datasets and statistical techniques with comprehensive data analysis.",
+      technologies: ["R Programming", "Machine Learning", "Statistical Analysis"],
+      date: "2023",
+      type: "Data Science & ML",
+      highlights: [
+        "Statistical model implementation",
+        "Mental health data analysis",
+        "Predictive algorithm development",
+        "Data visualization and insights"
+      ],
+      githubUrl: "https://github.com/Syedazohashaik",
+      liveUrl: null
+    },
+    {
+      title: "Virtual Network Configuration",
+      subtitle: "Network Simulation Project",
+      description: "Hands-on implementation of virtual network design and configuration with simulation and setup for academic and practical learning.",
+      technologies: ["Networking", "Simulation"],
+      date: "2023",
+      type: "Networking",
+      highlights: [
+        "Virtual network design",
+        "Network simulation setup",
+        "Configuration implementation",
+        "Academic project completion"
       ],
       githubUrl: "https://github.com/Syedazohashaik",
       liveUrl: null

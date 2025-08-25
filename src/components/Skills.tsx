@@ -2,80 +2,128 @@ import {
   Code, 
   Database, 
   Cloud, 
+  Layers, 
+  Zap, 
+  Smartphone, 
   Brain, 
-  Globe, 
-  Users, 
-  Clock, 
-  MessageSquare,
-  Zap,
-  Cpu,
-  Flame,
-  Layers,
-  Server,
-  Terminal,
-  GitBranch,
-  Monitor
+  Settings, 
+  Shield 
 } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Frameworks",
+      title: "Programming Languages",
       icon: Code,
       skills: [
         { name: "Python", icon: "🐍" },
-        { name: "Flask", icon: "🌶️" },
-        { name: "React", icon: "⚛️" },
+        { name: "JavaScript", icon: "⚡" },
+        { name: "TypeScript", icon: "💎" },
         { name: "Java", icon: "☕" },
+        { name: "C++", icon: "⚙️" },
+        { name: "R", icon: "📊" },
         { name: "SQL", icon: "🗃️" },
-        { name: "HTML", icon: "🌐" },
-        { name: "CSS", icon: "🎨" }
-      ],
-      color: "text-primary"
+        { name: "PHP", icon: "🐘" },
+        { name: "Kotlin", icon: "🤖" }
+      ]
     },
     {
-      title: "Cloud & Databases",
+      title: "Web Development",
+      icon: Layers,
+      skills: [
+        { name: "React", icon: "⚛️" },
+        { name: "Node.js", icon: "🟢" },
+        { name: "Flask", icon: "🔥" },
+        { name: "Django", icon: "🎯" },
+        { name: "Express.js", icon: "🚀" },
+        { name: "HTML5", icon: "🌐" },
+        { name: "CSS3", icon: "🎨" },
+        { name: "Tailwind CSS", icon: "💨" }
+      ]
+    },
+    {
+      title: "Mobile & App Development",
+      icon: Smartphone,
+      skills: [
+        { name: "Flutter", icon: "💙" },
+        { name: "Kotlin", icon: "🤖" },
+        { name: "Android Development", icon: "📱" },
+        { name: "React Native", icon: "⚛️" },
+        { name: "Cross-platform", icon: "🔄" }
+      ]
+    },
+    {
+      title: "Database & Storage",
+      icon: Database,
+      skills: [
+        { name: "MySQL", icon: "🐬" },
+        { name: "PostgreSQL", icon: "🐘" },
+        { name: "MongoDB", icon: "🍃" },
+        { name: "Firebase", icon: "🔥" },
+        { name: "SQLite", icon: "📱" },
+        { name: "Redis", icon: "❤️" }
+      ]
+    },
+    {
+      title: "Cloud & Infrastructure",
       icon: Cloud,
       skills: [
         { name: "AWS", icon: "☁️" },
-        { name: "Google Cloud", icon: "🌤️" },
-        { name: "Firebase", icon: "🔥" }
-      ],
-      color: "text-accent"
+        { name: "Google Cloud Platform", icon: "🌐" },
+        { name: "Docker", icon: "🐳" },
+        { name: "Kubernetes", icon: "⚓" },
+        { name: "Serverless", icon: "⚡" },
+        { name: "Microservices", icon: "🧩" }
+      ]
     },
     {
-      title: "AI/ML Libraries",
+      title: "AI & Machine Learning",
       icon: Brain,
       skills: [
-        { name: "TensorFlow", icon: "🧠" },
-        { name: "Scikit-learn", icon: "📊" },
-        { name: "Pandas", icon: "🐼" },
-        { name: "NumPy", icon: "🔢" },
-        { name: "OpenCV", icon: "👁️" },
-        { name: "Streamlit", icon: "🚀" }
-      ],
-      color: "text-primary-glow"
+        { name: "Machine Learning", icon: "🤖" },
+        { name: "Deep Learning", icon: "🧠" },
+        { name: "Computer Vision", icon: "👁️" },
+        { name: "TensorFlow", icon: "🔥" },
+        { name: "PyTorch", icon: "🔥" },
+        { name: "Scikit-learn", icon: "🧪" },
+        { name: "OpenCV", icon: "📷" }
+      ]
     },
     {
-      title: "Tools",
+      title: "DevOps & Tools",
+      icon: Settings,
+      skills: [
+        { name: "Git", icon: "🔀" },
+        { name: "GitHub Actions", icon: "🤖" },
+        { name: "CI/CD", icon: "🔄" },
+        { name: "Nginx", icon: "🟢" },
+        { name: "Linux", icon: "🐧" },
+        { name: "Automation", icon: "⚡" }
+      ]
+    },
+    {
+      title: "Cybersecurity & Networking",
+      icon: Shield,
+      skills: [
+        { name: "Cybersecurity", icon: "🔒" },
+        { name: "Network Security", icon: "🛡️" },
+        { name: "Threat Analysis", icon: "🔍" },
+        { name: "Network Configuration", icon: "🌍" },
+        { name: "Risk Assessment", icon: "⚠️" },
+        { name: "Incident Response", icon: "🚨" }
+      ]
+    },
+    {
+      title: "IoT & Hardware",
       icon: Zap,
       skills: [
-        { name: "Git", icon: "📝" },
-        { name: "VS Code", icon: "💻" },
-        { name: "Linux", icon: "🐧" }
-      ],
-      color: "text-secondary-foreground"
-    },
-    {
-      title: "Soft Skills",
-      icon: Users,
-      skills: [
-        { name: "Communication", icon: "💬" },
-        { name: "Teamwork", icon: "🤝" },
-        { name: "Time Management", icon: "⏰" },
-        { name: "Work Ethic", icon: "💪" }
-      ],
-      color: "text-muted-foreground"
+        { name: "IoT Development", icon: "🌐" },
+        { name: "ESP8266", icon: "📡" },
+        { name: "Arduino", icon: "🔧" },
+        { name: "Sensor Integration", icon: "🔬" },
+        { name: "Hardware Prototyping", icon: "⚙️" },
+        { name: "Gesture Control", icon: "👋" }
+      ]
     }
   ];
 
@@ -101,7 +149,7 @@ const Skills = () => {
             >
               <div className="flex items-center mb-4">
                 <div className={`p-3 rounded-xl bg-accent-soft group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className={`h-6 w-6 ${category.color}`} />
+                  <category.icon className="h-6 w-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground ml-3">
                   {category.title}
