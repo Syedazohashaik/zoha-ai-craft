@@ -2,34 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Portfolio Design System - All colors MUST be HSL */
+/* Professional Dark AI/ML Portfolio Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Clean & Professional */
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
-    --primary: 185 70% 50%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 185 75% 65%;
-    --secondary: 260 35% 55%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 210 30% 96%;
-    --muted-foreground: 215 25% 45%;
-    --accent: 260 55% 60%;
-    --accent-foreground: 0 0% 100%;
-    --accent-soft: 260 25% 96%;
+    /* Core Dark Theme Colors - Professional & Futuristic */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 191 100% 50%;
+    --primary-foreground: 222 84% 5%;
+    --primary-glow: 191 75% 65%;
+    --secondary: 265 89% 78%;
+    --secondary-foreground: 222 84% 5%;
+    --muted: 215 32% 17%;
+    --muted-foreground: 217 32% 65%;
+    --accent: 263 70% 50%;
+    --accent-foreground: 210 40% 98%;
+    --accent-soft: 263 25% 20%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    --surface: 210 15% 99%;
-    --surface-foreground: 215 25% 15%;
-    --border: 214 25% 90%;
-    --input: 214 25% 90%;
-    --ring: 185 70% 50%;
+    --surface: 222 84% 6%;
+    --surface-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 191 100% 50%;
+    
+    /* Neon Accent Colors */
+    --cyan: 191 100% 50%;
+    --violet: 263 70% 50%;
+    --purple: 280 100% 70%;
     
     /* Design System */
     --radius: 0.75rem;

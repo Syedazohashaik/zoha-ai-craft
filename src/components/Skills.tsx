@@ -128,14 +128,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-background">
-      <div className="container mx-auto max-w-6xl">
+    <section id="skills" className="relative min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_hsl(240_100%_70%_/_0.1),_transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_hsl(280_100%_70%_/_0.1),_transparent_50%)]" />
+      
+      <div className="relative z-10 container mx-auto max-w-6xl px-6 py-20">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-violet-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Skills & Expertise
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-4"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-violet-400 mx-auto rounded-full mb-6 shadow-lg shadow-cyan-400/20" />
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             A comprehensive toolkit for building intelligent solutions and solving complex problems.
           </p>
         </div>
@@ -144,23 +148,26 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={category.title}
-              className="group p-6 rounded-2xl bg-card border border-border hover:shadow-card hover:-translate-y-2 transition-all duration-300 animate-slide-up"
+              className="group relative bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 hover:bg-slate-900/60 hover:border-violet-400/50 transition-all duration-500 hover:scale-105 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center mb-4">
-                <div className={`p-3 rounded-xl bg-accent-soft group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className="h-6 w-6 text-accent" />
+              {/* Glowing Border Effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/20 via-violet-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10" />
+              
+              <div className="flex items-center mb-6">
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-violet-400/20 group-hover:from-cyan-400/30 group-hover:to-violet-400/30 transition-all duration-300">
+                  <category.icon className="h-8 w-8 text-cyan-400 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground ml-3">
+                <h3 className="text-xl font-bold text-white ml-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {category.title}
                 </h3>
               </div>
               
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skill.name}
-                    className="group/skill flex items-center gap-2 px-4 py-2 text-sm font-medium bg-surface text-foreground rounded-xl border border-border hover:bg-gradient-tech hover:text-white hover:border-accent hover:shadow-soft transition-all duration-300 cursor-pointer"
+                    className="group/skill flex items-center gap-2 px-4 py-2 text-sm font-medium bg-slate-800/50 text-slate-300 rounded-xl border border-slate-600/30 hover:bg-gradient-to-r hover:from-cyan-400/20 hover:to-violet-400/20 hover:text-white hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-300 cursor-pointer"
                     style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
                   >
                     <span className="text-lg group-hover/skill:scale-110 transition-transform duration-300">
@@ -172,14 +179,18 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-cyan-400/50 rounded-full" />
+              <div className="absolute bottom-4 left-4 w-1 h-1 bg-violet-400/50 rounded-full" />
             </div>
           ))}
         </div>
 
         {/* Featured Skills */}
-        <div className="mt-16 text-center animate-fade-in">
-          <h3 className="text-2xl font-semibold text-foreground mb-8">Core Competencies</h3>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <div className="mt-20 text-center animate-fade-in">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent mb-8">Core Competencies</h3>
+          <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
             {[
               { name: "Python Development", icon: "🐍" },
               { name: "Machine Learning", icon: "🤖" },
@@ -189,13 +200,13 @@ const Skills = () => {
             ].map((skill, index) => (
               <div
                 key={skill.name}
-                className="group flex items-center gap-3 px-6 py-4 bg-gradient-primary rounded-2xl text-white font-medium hover:scale-105 transition-all duration-300 shadow-glow hover:shadow-xl cursor-pointer"
+                className="group flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 rounded-2xl text-white font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-400/20 cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <span className="text-2xl group-hover:rotate-12 transition-transform duration-300">
                   {skill.icon}
                 </span>
-                <span className="group-hover:tracking-wide transition-all duration-300">
+                <span className="group-hover:tracking-wide transition-all duration-300 text-lg">
                   {skill.name}
                 </span>
               </div>

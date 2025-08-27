@@ -33,7 +33,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "glass-effect shadow-card" 
+          ? "bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl shadow-cyan-400/10" 
           : "bg-transparent"
       }`}
     >
@@ -42,7 +42,7 @@ const Header = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection("#hero")}
-            className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+            className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-violet-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
           >
             Syeda Zoha Shaik
           </button>
@@ -53,17 +53,15 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-accent transition-colors duration-300 font-medium relative group"
+                className="text-slate-200 hover:text-cyan-400 transition-colors duration-300 font-medium relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-violet-400 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
             
-            <Button 
-              variant="hero" 
-              size="sm" 
-              className="ml-4"
+            <button 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20 ml-4"
               onClick={() => {
                 // Open resume in new tab
                 window.open('/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png', '_blank');
@@ -76,41 +74,39 @@ const Header = () => {
                 document.body.removeChild(link);
               }}
             >
-              <Download className="mr-2 h-4 w-4" />
+              <Download className="h-4 w-4" />
               Resume
-            </Button>
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-accent/10 transition-colors"
+            className="md:hidden p-2 rounded-md hover:bg-slate-800/50 transition-colors"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className="h-6 w-6 text-slate-200" />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className="h-6 w-6 text-slate-200" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass-effect shadow-card animate-slide-up">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/90 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl animate-slide-up">
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-foreground hover:text-accent transition-colors duration-300 font-medium py-2"
+                  className="block w-full text-left text-slate-200 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
                 >
                   {item.label}
                 </button>
               ))}
-              <Button 
-                variant="hero" 
-                size="sm" 
-                className="w-full mt-4"
+              <button 
+                className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20 mt-4"
                 onClick={() => {
                   // Open resume in new tab
                   window.open('/lovable-uploads/022a5b5c-a69d-4dca-a37d-7b5a77ac515c.png', '_blank');
@@ -123,9 +119,9 @@ const Header = () => {
                   document.body.removeChild(link);
                 }}
               >
-                <Download className="mr-2 h-4 w-4" />
+                <Download className="h-4 w-4" />
                 Download Resume
-              </Button>
+              </button>
             </div>
           </div>
         )}

@@ -117,24 +117,28 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-surface">
-      <div className="container mx-auto max-w-6xl">
+    <section id="contact" className="relative min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_hsl(240_100%_70%_/_0.1),_transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_hsl(280_100%_70%_/_0.1),_transparent_50%)]" />
+      
+      <div className="relative z-10 container mx-auto max-w-6xl px-6 py-20">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-violet-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Let's Connect
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-4"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-violet-400 mx-auto rounded-full mb-6 shadow-lg shadow-cyan-400/20" />
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Ready to collaborate on your next AI/ML project? I'd love to hear from you.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
-          <div className="animate-slide-up">
+          <div className="relative bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 animate-slide-up hover:bg-slate-900/60 hover:border-violet-400/50 transition-all duration-500">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Get In Touch</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-2xl font-bold text-white mb-4">Get In Touch</h3>
+              <p className="text-slate-300 leading-relaxed">
                 I'm always excited to discuss new opportunities, innovative projects, 
                 or simply connect with fellow AI/ML enthusiasts. Whether you have a 
                 project in mind or just want to say hello, don't hesitate to reach out!
@@ -146,24 +150,24 @@ const Contact = () => {
               {contactInfo.map((item, index) => (
                 <div 
                   key={item.label}
-                  className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-card hover:shadow-soft transition-all duration-300"
+                  className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-slate-800/50 transition-all duration-300"
                 >
-                  <div className="p-3 bg-accent-soft rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-6 w-6 text-accent" />
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/20 to-violet-400/20 group-hover:from-cyan-400/30 group-hover:to-violet-400/30 transition-all duration-300">
+                    <item.icon className="h-6 w-6 text-cyan-400" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-1">{item.label}</h4>
+                    <h4 className="font-semibold text-white mb-1">{item.label}</h4>
                     {item.href ? (
                       <a 
                         href={item.href}
-                        className="text-accent hover:text-accent/80 transition-colors duration-300 font-medium"
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <span className="text-foreground font-medium">{item.value}</span>
+                      <span className="text-white font-medium">{item.value}</span>
                     )}
-                    <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                    <p className="text-sm text-slate-300 mt-1">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -171,7 +175,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h4 className="font-semibold text-foreground">Follow Me</h4>
+              <h4 className="font-semibold text-white">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -179,16 +183,16 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center space-x-3 p-4 bg-card rounded-2xl hover:shadow-soft transition-all duration-300 hover:-translate-y-1 ${social.color}`}
+                    className="group flex items-center space-x-3 p-4 bg-slate-800/50 rounded-2xl hover:bg-slate-800/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/20"
                   >
-                    <div className="p-2 bg-accent-soft rounded-lg group-hover:scale-110 transition-transform duration-300">
-                      <social.icon className="h-5 w-5 text-accent" />
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400/20 to-violet-400/20 group-hover:from-cyan-400/30 group-hover:to-violet-400/30 transition-all duration-300">
+                      <social.icon className="h-5 w-5 text-cyan-400" />
                     </div>
                     <div>
-                      <div className="font-medium text-foreground">{social.name}</div>
-                      <div className="text-sm text-muted-foreground">{social.description}</div>
+                      <div className="font-medium text-white">{social.name}</div>
+                      <div className="text-sm text-slate-300">{social.description}</div>
                     </div>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 ))}
               </div>
@@ -197,13 +201,16 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <div className="bg-gradient-accent p-8 rounded-3xl">
+            <div className="relative bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 hover:bg-slate-900/60 hover:border-violet-400/50 transition-all duration-500">
+              {/* Glowing Border Effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/20 via-violet-400/20 to-purple-400/20 opacity-0 hover:opacity-100 transition-opacity duration-500 blur-sm -z-10" />
+              
               <div className="text-center mb-8">
-                <MessageSquare className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <MessageSquare className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">
                   Send Me a Message
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-slate-300">
                   I typically respond within 24 hours
                 </p>
               </div>
@@ -212,7 +219,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-foreground font-medium">
+                    <Label htmlFor="name" className="text-white font-medium">
                       Full Name *
                     </Label>
                     <Input
@@ -223,11 +230,11 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="bg-card/50 border-border focus:border-accent"
+                      className="bg-slate-800/50 border-slate-600/30 text-white placeholder:text-slate-400 focus:border-cyan-400/50"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground font-medium">
+                    <Label htmlFor="email" className="text-white font-medium">
                       Email Address *
                     </Label>
                     <Input
@@ -238,13 +245,13 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="bg-card/50 border-border focus:border-accent"
+                      className="bg-slate-800/50 border-slate-600/30 text-white placeholder:text-slate-400 focus:border-cyan-400/50"
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-foreground font-medium">
+                  <Label htmlFor="subject" className="text-white font-medium">
                     Subject *
                   </Label>
                   <Input
@@ -255,12 +262,12 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="bg-card/50 border-border focus:border-accent"
+                    className="bg-slate-800/50 border-slate-600/30 text-white placeholder:text-slate-400 focus:border-cyan-400/50"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-foreground font-medium">
+                  <Label htmlFor="message" className="text-white font-medium">
                     Message *
                   </Label>
                   <Textarea
@@ -271,62 +278,56 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="bg-card/50 border-border focus:border-accent resize-none"
+                    className="bg-slate-800/50 border-slate-600/30 text-white placeholder:text-slate-400 focus:border-cyan-400/50 resize-none"
                   />
                 </div>
                 
-                <Button
+                <button
                   type="submit"
-                  variant="hero"
-                  size="lg"
-                  className="w-full group"
+                  className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 rounded-2xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20 group disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
+                      <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
                       Sending...
                     </>
                   ) : (
                     <>
-                      <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                       Send Message
                     </>
                   )}
-                </Button>
+                </button>
               </form>
 
               {/* Quick Contact Options */}
-              <div className="mt-8 pt-6 border-t border-border/20">
-                <p className="text-sm text-muted-foreground text-center mb-4">
+              <div className="mt-8 pt-6 border-t border-slate-600/30">
+                <p className="text-sm text-slate-300 text-center mb-4">
                   Or reach out directly:
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="group bg-card/30 hover:bg-card/50"
+                  <button 
+                    className="flex items-center justify-center gap-2 p-3 bg-slate-800/50 border border-slate-600/30 hover:border-cyan-400/50 rounded-xl text-slate-200 hover:text-cyan-400 transition-all duration-300"
                     onClick={() => window.open("mailto:zohashaik538@gmail.com?subject=Project Collaboration Inquiry", "_blank")}
                   >
-                    <Mail className="mr-2 h-4 w-4" />
+                    <Mail className="h-4 w-4" />
                     Email
-                  </Button>
+                  </button>
                   
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="group bg-card/30 hover:bg-card/50"
+                  <button 
+                    className="flex items-center justify-center gap-2 p-3 bg-slate-800/50 border border-slate-600/30 hover:border-violet-400/50 rounded-xl text-slate-200 hover:text-violet-400 transition-all duration-300"
                     onClick={() => window.open("https://linkedin.com/in/syeda-zoha-shaik-17645a2b3", "_blank")}
                   >
-                    <Linkedin className="mr-2 h-4 w-4" />
+                    <Linkedin className="h-4 w-4" />
                     LinkedIn
-                  </Button>
+                  </button>
                 </div>
               </div>
 
               {/* Availability */}
-              <div className="mt-6 bg-card/50 p-4 rounded-2xl text-center">
-                <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+              <div className="mt-6 bg-slate-800/50 p-4 rounded-2xl text-center border border-slate-600/30">
+                <div className="flex items-center justify-center space-x-2 text-sm text-slate-300">
                   <Clock className="h-4 w-4" />
                   <span>Available for new opportunities</span>
                 </div>
@@ -334,23 +335,23 @@ const Contact = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
-              <h4 className="font-semibold text-foreground mb-3">What I'm Looking For</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+            <div className="mt-8 bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6">
+              <h4 className="font-semibold text-white mb-3">What I'm Looking For</h4>
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                   Internship opportunities in AI/ML
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
                   Collaborative projects and hackathons
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                   Mentorship and learning opportunities
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                   Tech community connections
                 </li>
               </ul>
